@@ -1,0 +1,27 @@
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+  
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+      - id: blog-site-blog
+        uri: http://localhost:8082
+        #uri: lb://blog-site-blog
+        predicates:
+        - Path=/blogsite/**
+      - id: blog-site-user
+        uri: http://localhost:8081
+        #uri: lb://blog-site-user
+        predicates:
+        - Path=/api/blogsite/users**             

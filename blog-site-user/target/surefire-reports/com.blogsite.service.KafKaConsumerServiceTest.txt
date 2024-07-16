@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.blogsite.service.KafKaConsumerServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 1.174 s <<< FAILURE! - in com.blogsite.service.KafKaConsumerServiceTest
+testConsumeUserLogin  Time elapsed: 1.153 s  <<< ERROR!
+java.lang.IllegalAccessException: Can not set static final org.slf4j.Logger field com.blogsite.service.KafKaConsumerService.log to org.slf4j.Logger$MockitoMock$rKY5f242
+	at com.blogsite.service.KafKaConsumerServiceTest.setLoggerUsingReflection(KafKaConsumerServiceTest.java:35)
+	at com.blogsite.service.KafKaConsumerServiceTest.setUp(KafKaConsumerServiceTest.java:29)
+
+testConsumeUserRegisterFail  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalAccessException: Can not set static final org.slf4j.Logger field com.blogsite.service.KafKaConsumerService.log to org.slf4j.Logger$MockitoMock$rKY5f242
+	at com.blogsite.service.KafKaConsumerServiceTest.setLoggerUsingReflection(KafKaConsumerServiceTest.java:35)
+	at com.blogsite.service.KafKaConsumerServiceTest.setUp(KafKaConsumerServiceTest.java:29)
+
+testConsumeUserRegister  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalAccessException: Can not set static final org.slf4j.Logger field com.blogsite.service.KafKaConsumerService.log to org.slf4j.Logger$MockitoMock$rKY5f242
+	at com.blogsite.service.KafKaConsumerServiceTest.setLoggerUsingReflection(KafKaConsumerServiceTest.java:35)
+	at com.blogsite.service.KafKaConsumerServiceTest.setUp(KafKaConsumerServiceTest.java:29)
+
